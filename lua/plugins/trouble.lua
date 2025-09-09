@@ -1,23 +1,26 @@
 return {
 	{
 		"folke/trouble.nvim",
+		cond = function()
+			return not vim.g.vscode
+		end,
 		opts = {}, -- for default options, refer to the configuration section for custom setup.
 		cmd = "Trouble",
 		keys = {
 			{
-				"<leader>pg",
+				"<leader>dg",
 				"<cmd>Trouble diagnostics toggle focus=true<cr>",
-				desc = "Diagnostics (Trouble)",
+				desc = "Global diagnostics",
 			},
 			{
-				"<leader>pb",
+				"<leader>db",
 				"<cmd>Trouble diagnostics toggle focus=true filter.buf=0<cr>",
-				desc = "Buffer Diagnostics (Trouble)",
+				desc = "Buffer diagnostics",
 			},
 			{
-				"<leader>cs",
+				"<leader>ds",
 				"<cmd>Trouble symbols toggle focus=false<cr>",
-				desc = "Symbols (Trouble)",
+				desc = "Diagnostics symbols",
 			},
 		}
 	}

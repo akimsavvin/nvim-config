@@ -5,9 +5,9 @@ return {
 			ui = {
 				keymaps = {
 					uninstall_package = "d",
-				}
-			}
-		}
+				},
+			},
+		},
 	},
 	{
 		"mason-org/mason-lspconfig.nvim",
@@ -18,10 +18,12 @@ return {
 		opts = {
 			enusre_installed = {
 				"lua_ls",
+				"vimls",
 				"gopls",
-				"ts_ts",
+				"ts_ls",
+				"vue_ls",
 				"tailwindcss",
-			}
-		}
-	}
+			},
+		},
+	},
 }
